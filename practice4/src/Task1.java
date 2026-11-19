@@ -29,3 +29,15 @@ public class Book {
         return "книга" + title + "автор" + author + "страниц прочитано:" + isRead;    //красиво возвращаем что то там да
     }
 }
+
+public class Task1 {
+    public static void main(String[] args) {
+        Book book1 = new Book("капитанская дочка", "Пушкин А.С.", 512, true);
+        Book book2 = new Book("Гарри Поттер", "Пушкин А.С.", 352, false);
+        Book book3 = new Book("дубровский", "Пушкин А.С.", 333, false);
+
+        System.out.println(book1.describe());
+        System.out.println(book2.describe());
+        System.out.println(book3.describe());
+    }
+}
