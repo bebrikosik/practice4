@@ -32,4 +32,26 @@ public class Library {
         }
         return unreadBooks;
     }
+    public class Task3 {
+    public static void main(String[] args) {
+        Library library = new Library();
+
+        library.addBook(new Book("1984", "Джордж Оруэлл", 328, true));
+        library.addBook(new Book("Скотный двор", "Джордж Оруэлл", 112, false));
+        library.addBook(new Book("Гарри Поттер", "Дж. Роулинг", 432, false));
+        library.addBook(new Book("Оно", "Стивен Кинг", 1138, true));
+        library.addBook(new Book("Кэрри", "Стивен Кинг", 199, false));
+
+        System.out.println("Всего страниц: " + library.getTotalPages());
+
+        System.out.println("Книги Джорджа Оруэлла:");
+        for (Book book : library.findByAuthor("Джордж Оруэлл")) {
+            System.out.println(book.describe());
+        }
+
+        System.out.println("Непрочитанные книги:");
+        for (Book book : library.getUnreadBooks()) {
+            System.out.println(book.describe());
+        }
+    }
 }
